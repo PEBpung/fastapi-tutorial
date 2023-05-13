@@ -1,6 +1,13 @@
 ## FastAPI 튜토리얼
 
-### poetry 설치
+### Docker로 실행
+```bash
+# docker build
+DOCKER_BUILDKIT=1 docker build -t fastapi_todo .
+# docker run 
+docker run -itd -p 8000:8000 --name fastapi_todo fastapi_todo:latest 
+```
+### Poetry로 실행
 ```bash
 # Mac 환경
 brew install poetry

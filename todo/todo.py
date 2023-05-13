@@ -1,13 +1,13 @@
 from fastapi import APIRouter, Path, HTTPException, status, Request, Depends
 from fastapi.templating import Jinja2Templates
 
-from todo.model import Todo, TodoItem, TodoItems
+from model import Todo, TodoItem, TodoItems
 
 todo_router = APIRouter()
 
 todo_list = []
 
-templates = Jinja2Templates(directory="todo/templates/")
+templates = Jinja2Templates(directory="templates/")
 
 
 @todo_router.post("/todo")
