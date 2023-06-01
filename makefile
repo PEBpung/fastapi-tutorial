@@ -4,7 +4,7 @@ black:
 
 .PHONY: install
 install:
- 	brew install -U poetry && poetry install
+	brew install -U poetry && poetry install
 
 .PHONY: update
 update:
