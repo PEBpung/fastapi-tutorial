@@ -1,0 +1,16 @@
+version: "3"
+services:
+  web:
+    build: web/
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./WebApp:/app/
+    depends_on:
+      - db
+  db:
+    platform: linux/amd64
+    image: surrealdb/surrealdb:latest
+    ports:
+      - "8000:8000"
+    command: start --log debug --user root --pass root
